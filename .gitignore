@@ -1,0 +1,11 @@
+node_modules/
+build/
+drugs/
+images/
+drugs-all-medicines/
+drugs-all-medicines.zip
+.env*
+!.env.template
+states/
+output/
+drugs-zipped/

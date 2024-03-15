@@ -1,0 +1,36 @@
+{
+  "name": "catalogue-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/main.js",
+  "scripts": {
+    "test": "tsc && node ./build/test.js",
+    "start": "tsc && node ./build/main.js",
+    "start:scrape": "tsc && node ./build/actions/scrape.js",
+    "start:parse": "tsc && node ./build/actions/parse.js",
+    "start:upload": "tsc && node ./build/actions/upload.js",
+    "pm2:start:scrape": "tsc && pm2 start pm2.yml --only scrape && pm2 logs scrape",
+    "pm2:start:parse": "tsc && pm2 start pm2.yml --only parse && pm2 logs parse",
+    "pm2:start:upload": "tsc && pm2 start pm2.yml --only upload && pm2 logs upload"
+  },
+  "dependencies": {
+    "async-retry": "^1.3.3",
+    "aws-sdk": "^2.1125.0",
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
+    "fs-extra": "^10.1.0",
+    "puppeteer": "^13.7.0",
+    "typescript": "^4.6.4",
+    "unzipper": "^0.10.11",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/async-retry": "^1.4.4",
+    "@types/fs-extra": "^9.0.13",
+    "@types/puppeteer": "^5.4.6",
+    "@types/stream-buffers": "^3.0.4",
+    "@types/unzipper": "^0.10.5",
+    "@types/uuid": "^8.3.4"
+  }
+}

@@ -1,0 +1,10 @@
+apps:
+  - name: scrape
+    script: ./build/actions/scrape.js
+    autorestart: false
+  - name: parse
+    script: ./build/actions/parse.js
+    autorestart: false
+  - name: upload
+    script: ./build/actions/upload.js
+    autorestart: false
